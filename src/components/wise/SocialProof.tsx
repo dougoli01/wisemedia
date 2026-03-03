@@ -11,8 +11,6 @@ const cases = [
   { client: "Big Apple", location: "Taguatinga, DF", result: "+5.200 seguidores em 90 dias", logo: bigAppleLogo },
   { client: "Cloud Cell", location: "Águas Claras, DF", result: "+180% de faturamento em 45 dias", logo: cloudCellLogo },
   { client: "Ícaro Celulares", location: "Anápolis, GO", result: "62 vendas diretas pelo Instagram", logo: icaroLogo },
-  { client: "Digital Store", location: "Samambaia, DF", result: "+420% de engajamento orgânico", logo: "" },
-  { client: "TopCell Acessórios", location: "Valparaíso, GO", result: "ROI de 8x em campanhas Meta", logo: "" },
 ];
 
 // Triple the array for infinite illusion
