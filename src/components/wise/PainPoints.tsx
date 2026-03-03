@@ -14,7 +14,7 @@ const pains = [
   {
     icon: Clock,
     title: "Sem tempo para marketing",
-    desc: "Entre fornecedores, atendimento e caixa, criar conteúdo e gerenciar anúncios fica pra depois — ou nunca.",
+    desc: "Entre fornecedores, atendimento e caixa, criar conteúdo e gerenciar anúncios fica pra depois ou nunca.",
   },
 ];
 
