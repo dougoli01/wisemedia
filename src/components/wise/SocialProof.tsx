@@ -6,34 +6,34 @@ import cloudCellLogo from "@/assets/clients/cloud-cell.png";
 import icaroLogo from "@/assets/clients/icaro.png";
 
 const cases = [
-  { client: "Noelia Store", location: "Brasília, DF", result: "+312% de alcance em 60 dias", logo: noeliaLogo },
-  { client: "Win Store", location: "Goiânia, GO", result: "87 leads qualificados/mês", logo: winStoreLogo },
-  { client: "Big Apple", location: "Taguatinga, DF", result: "+5.200 seguidores em 90 dias", logo: bigAppleLogo },
-  { client: "Cloud Cell", location: "Águas Claras, DF", result: "+180% de faturamento em 45 dias", logo: cloudCellLogo },
-  { client: "Ícaro Celulares", location: "Anápolis, GO", result: "62 vendas diretas pelo Instagram", logo: icaroLogo },
-];
+{ client: "Noelia Store", location: "Brasília, DF", result: "+312% de alcance em 60 dias", logo: noeliaLogo },
+{ client: "Win Store", location: "Goiânia, GO", result: "87 leads qualificados/mês", logo: winStoreLogo },
+{ client: "Big Apple", location: "Taguatinga, DF", result: "+5.200 seguidores em 90 dias", logo: bigAppleLogo },
+{ client: "Cloud Cell", location: "Águas Claras, DF", result: "+180% de faturamento em 45 dias", logo: cloudCellLogo },
+{ client: "Ícaro Celulares", location: "Anápolis, GO", result: "62 vendas diretas pelo Instagram", logo: icaroLogo }];
+
 
 // Triple the array for infinite illusion
 const extendedCases = [...cases, ...cases, ...cases];
 
-function Card({ c }: { c: (typeof cases)[0] }) {
+function Card({ c }: {c: (typeof cases)[0];}) {
   return (
     <div className="w-1/3 flex-shrink-0 px-3">
       <div className="rounded-2xl border border-border bg-card p-8 text-center">
         <div className="mx-auto mb-5 flex h-24 w-24 items-center justify-center overflow-hidden rounded-2xl border border-border bg-muted">
-          {c.logo ? (
-            <img src={c.logo} alt={`Logo ${c.client}`} className="h-full w-full object-contain p-2" />
-          ) : (
-            <span className="text-sm font-bold text-muted-foreground">LOGO</span>
-          )}
+          {c.logo ?
+          <img src={c.logo} alt={`Logo ${c.client}`} className="h-full w-full p-2 object-fill" /> :
+
+          <span className="text-sm font-bold text-muted-foreground">LOGO</span>
+          }
         </div>
         <p className="text-sm font-semibold text-muted-foreground">
           {c.client} — {c.location}
         </p>
         <p className="mt-3 text-xl font-black text-primary md:text-2xl">{c.result}</p>
       </div>
-    </div>
-  );
+    </div>);
+
 }
 
 export default function SocialProof() {
@@ -77,12 +77,12 @@ export default function SocialProof() {
             className="flex"
             style={{
               transform: `translateX(${translateX}%)`,
-              transition: transition ? "transform 700ms ease-in-out" : "none",
-            }}
-          >
-            {extendedCases.map((c, i) => (
-              <Card key={i} c={c} />
-            ))}
+              transition: transition ? "transform 700ms ease-in-out" : "none"
+            }}>
+            
+            {extendedCases.map((c, i) =>
+            <Card key={i} c={c} />
+            )}
           </div>
         </div>
 
@@ -92,18 +92,18 @@ export default function SocialProof() {
             className="flex"
             style={{
               transform: `translateX(${-(offset * 100)}%)`,
-              transition: transition ? "transform 700ms ease-in-out" : "none",
-            }}
-          >
-            {extendedCases.map((c, i) => (
-              <div key={i} className="w-full flex-shrink-0 px-2">
+              transition: transition ? "transform 700ms ease-in-out" : "none"
+            }}>
+            
+            {extendedCases.map((c, i) =>
+            <div key={i} className="w-full flex-shrink-0 px-2">
                 <div className="rounded-2xl border border-border bg-card p-8 text-center">
                   <div className="mx-auto mb-5 flex h-24 w-24 items-center justify-center overflow-hidden rounded-2xl border border-border bg-muted">
-                    {c.logo ? (
-                      <img src={c.logo} alt={`Logo ${c.client}`} className="h-full w-full object-contain p-2" />
-                    ) : (
-                      <span className="text-sm font-bold text-muted-foreground">LOGO</span>
-                    )}
+                    {c.logo ?
+                  <img src={c.logo} alt={`Logo ${c.client}`} className="h-full w-full object-contain p-2" /> :
+
+                  <span className="text-sm font-bold text-muted-foreground">LOGO</span>
+                  }
                   </div>
                   <p className="text-sm font-semibold text-muted-foreground">
                     {c.client} — {c.location}
@@ -111,10 +111,10 @@ export default function SocialProof() {
                   <p className="mt-3 text-xl font-black text-primary">{c.result}</p>
                 </div>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
