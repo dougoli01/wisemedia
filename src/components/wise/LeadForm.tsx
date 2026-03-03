@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from "react";
 
-const WEBHOOK_URL = "https://hook.us2.make.com/38g5wg6xwjioedrxpfx4z2bilcc62hjo";
+const WEBHOOK_URL = "https://hook.us2.make.com/v5eq8j444ij2hkti2sfx7513lrby2bmh";
 
 const tiposLoja = ["Loja física", "Escritório ou ponto de venda", "Loja física + online"];
 
