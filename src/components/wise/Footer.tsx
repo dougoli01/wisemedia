@@ -1,30 +1,41 @@
 export default function Footer() {
+  const whatsappMsg = encodeURIComponent("Olá, tudo bem? Vim do site e queria um atendimento mais rápido.");
+  const whatsappUrl = `https://wa.me/5561981504925?text=${whatsappMsg}`;
+
   return (
-    <footer className="border-t border-border bg-wise-black py-12 text-primary-foreground/70">
-      <div className="container flex flex-col items-center gap-6 text-center md:flex-row md:justify-between md:text-left">
+    <footer className="border-t border-border bg-wise-black py-10">
+      <div className="container flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+        {/* Left */}
         <div>
-          <p className="text-2xl font-black text-primary-foreground">Wise</p>
-          <p className="mt-1 text-sm">Marketing que vende para lojas de celular.</p>
+          <div className="flex items-center gap-2.5">
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-sm font-bold text-primary-foreground">
+              W
+            </div>
+            <span className="text-lg font-black text-primary-foreground">Wise</span>
+          </div>
+          <p className="mt-2 text-sm text-primary-foreground/60">Marketing que vende para lojas de celular.</p>
+          <p className="mt-1 text-xs text-primary-foreground/40">© 2026 Wise Agência. Brasília, DF.</p>
         </div>
-        <div className="flex items-center gap-6 text-sm">
+
+        {/* Right */}
+        <div className="flex items-center gap-3">
           <a
-            href="https://instagram.com/"
+            href="https://www.instagram.com/wisemedia_"
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-colors hover:text-primary-foreground"
+            className="rounded-lg border border-primary-foreground/20 px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary-foreground/10"
           >
             Instagram
           </a>
           <a
-            href="https://wa.me/"
+            href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="transition-colors hover:text-primary-foreground"
+            className="rounded-lg border border-primary-foreground/20 px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary-foreground/10"
           >
             WhatsApp
           </a>
         </div>
-        <p className="text-xs">© 2026 Wise Agência. Brasília, DF.</p>
       </div>
     </footer>
   );
