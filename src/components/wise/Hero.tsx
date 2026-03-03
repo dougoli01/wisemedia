@@ -17,8 +17,8 @@ export default function Hero() {
               Mais clientes para sua loja de celular todos os meses.
             </h1>
             <p className="fade-up mt-6 max-w-xl text-lg text-primary-foreground/70">
-              A Wise atrai compradores reais para sua loja com anúncios que vendem e
-              redes sociais que constroem autoridade no seu bairro.
+              A Wise atrai compradores reais para sua loja com anúncios que vendem e redes sociais que constroem autoridade.
+            
             </p>
             <div className="fade-up mt-10 flex flex-col gap-4 sm:flex-row">
               <a
