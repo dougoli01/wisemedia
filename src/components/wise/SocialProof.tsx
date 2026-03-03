@@ -10,7 +10,7 @@ const cases = [
 { client: "Win Store", location: "Goiânia, GO", result: "87 leads qualificados/mês", logo: winStoreLogo },
 { client: "Big Apple", location: "Taguatinga, DF", result: "+5.200 seguidores em 90 dias", logo: bigAppleLogo },
 { client: "Cloud Cell", location: "Águas Claras, DF", result: "+180% de faturamento em 45 dias", logo: cloudCellLogo },
-{ client: "Ícaro Celulares", location: "Anápolis, GO", result: "62 vendas diretas pelo Instagram", logo: icaroLogo }];
+{ client: "Ícaro Games e Cell", location: "Brasília, DF", result: "62 vendas diretas pelo Instagram", logo: icaroLogo }];
 
 
 // Triple the array for infinite illusion
