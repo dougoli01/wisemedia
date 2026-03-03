@@ -1,12 +1,8 @@
 import { useState, type FormEvent } from "react";
 
-const WEBHOOK_URL = "[COLE_AQUI_A_URL_DO_WEBHOOK]";
+const WEBHOOK_URL = "https://hook.us2.make.com/38g5wg6xwjioedrxpfx4z2bilcc62hjo";
 
-const tiposLoja = [
-  "Loja física",
-  "Escritório ou ponto de venda",
-  "Loja física + online",
-];
+const tiposLoja = ["Loja física", "Escritório ou ponto de venda", "Loja física + online"];
 
 function formatPhone(value: string) {
   const digits = value.replace(/\D/g, "").slice(0, 11);
@@ -32,8 +28,7 @@ export default function LeadForm() {
     if (!form.nome.trim()) e.nome = "Informe seu nome";
     const digits = form.whatsapp.replace(/\D/g, "");
     if (digits.length < 10) e.whatsapp = "Informe um WhatsApp válido";
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email))
-      e.email = "Informe um e-mail válido";
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = "Informe um e-mail válido";
     if (!form.tipo_loja) e.tipo_loja = "Selecione o tipo de loja";
     setErrors(e);
     return Object.keys(e).length === 0;
@@ -65,9 +60,7 @@ export default function LeadForm() {
         <div className="container max-w-xl text-center">
           <div className="rounded-2xl border border-primary/20 bg-primary/5 p-10">
             <h3 className="text-2xl font-bold text-primary">Recebemos seu contato!</h3>
-            <p className="mt-3 text-muted-foreground">
-              A equipe Wise vai te chamar em breve no WhatsApp.
-            </p>
+            <p className="mt-3 text-muted-foreground">A equipe Wise vai te chamar em breve no WhatsApp.</p>
           </div>
         </div>
       </section>
@@ -77,9 +70,7 @@ export default function LeadForm() {
   return (
     <section id="contato" className="py-20 md:py-28">
       <div className="container max-w-xl">
-        <h2 className="fade-up text-center text-3xl font-bold tracking-tight md:text-4xl">
-          Fale com a Wise
-        </h2>
+        <h2 className="fade-up text-center text-3xl font-bold tracking-tight md:text-4xl">Fale com a Wise</h2>
         <p className="fade-up mt-3 text-center text-muted-foreground">
           Preencha o formulário e entraremos em contato pelo WhatsApp.
         </p>
@@ -104,15 +95,11 @@ export default function LeadForm() {
             <input
               type="tel"
               value={form.whatsapp}
-              onChange={(e) =>
-                setForm({ ...form, whatsapp: formatPhone(e.target.value) })
-              }
+              onChange={(e) => setForm({ ...form, whatsapp: formatPhone(e.target.value) })}
               className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-ring/20"
               placeholder="(XX) XXXXX-XXXX"
             />
-            {errors.whatsapp && (
-              <p className="mt-1 text-xs text-destructive">{errors.whatsapp}</p>
-            )}
+            {errors.whatsapp && <p className="mt-1 text-xs text-destructive">{errors.whatsapp}</p>}
           </div>
 
           {/* E-mail */}
@@ -143,9 +130,7 @@ export default function LeadForm() {
                 </option>
               ))}
             </select>
-            {errors.tipo_loja && (
-              <p className="mt-1 text-xs text-destructive">{errors.tipo_loja}</p>
-            )}
+            {errors.tipo_loja && <p className="mt-1 text-xs text-destructive">{errors.tipo_loja}</p>}
           </div>
 
           {/* Mensagem */}
