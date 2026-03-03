@@ -2,21 +2,26 @@ import { useState, type FormEvent } from "react";
 
 const WEBHOOK_URL = "https://hook.us2.make.com/v5eq8j444ij2hkti2sfx7513lrby2bmh";
 
-const tiposLoja = ["Loja física", "Escritório ou ponto de venda", "Loja física + online"];
+const trafegOptions = [
+  "Não, nunca investimos",
+  "Sim, já investimos",
+  "Sim, já investimos e nunca tivemos retorno",
+];
 
-function formatPhone(value: string) {
-  const digits = value.replace(/\D/g, "").slice(0, 11);
-  if (digits.length <= 2) return `(${digits}`;
-  if (digits.length <= 7) return `(${digits.slice(0, 2)}) ${digits.slice(2)}`;
-  return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
-}
+const vendasOptions = [
+  "Menos de 40 aparelhos",
+  "Entre 40 a 60 aparelhos",
+  "Entre 60 a 100 aparelhos",
+  "Entre 100 e 200 aparelhos",
+  "Mais de 200 aparelhos",
+];
 
 export default function LeadForm() {
   const [form, setForm] = useState({
     nome: "",
-    whatsapp: "",
-    email: "",
-    tipo_loja: "",
+    instagram: "",
+    ja_rodou_trafego: "",
+    vendas_mes: "",
     mensagem: "",
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -26,10 +31,9 @@ export default function LeadForm() {
   function validate() {
     const e: Record<string, string> = {};
     if (!form.nome.trim()) e.nome = "Informe seu nome";
-    const digits = form.whatsapp.replace(/\D/g, "");
-    if (digits.length < 10) e.whatsapp = "Informe um WhatsApp válido";
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = "Informe um e-mail válido";
-    if (!form.tipo_loja) e.tipo_loja = "Selecione o tipo de loja";
+    if (!form.instagram.trim()) e.instagram = "Informe seu @";
+    if (!form.ja_rodou_trafego) e.ja_rodou_trafego = "Selecione uma opção";
+    if (!form.vendas_mes) e.vendas_mes = "Selecione uma opção";
     setErrors(e);
     return Object.keys(e).length === 0;
   }
