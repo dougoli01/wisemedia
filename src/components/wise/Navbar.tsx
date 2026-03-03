@@ -3,10 +3,10 @@ import { Menu, X } from "lucide-react";
 import wiseLogo from "@/assets/wise-logo.png";
 
 const navLinks = [
-  { label: "Serviços", href: "#servicos" },
-  { label: "Resultados", href: "#resultados" },
-  { label: "Contato", href: "#contato" },
-];
+{ label: "Serviços", href: "#servicos" },
+{ label: "Resultados", href: "#resultados" },
+{ label: "Contato", href: "#contato" }];
+
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -20,20 +20,20 @@ export default function Navbar() {
 
         {/* Desktop */}
         <div className="hidden items-center gap-8 md:flex">
-          {navLinks.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-            >
+          {navLinks.map((l) =>
+          <a
+            key={l.href}
+            href={l.href}
+            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
+            
               {l.label}
             </a>
-          ))}
+          )}
           <a
             href="#contato"
-            className="rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-          >
-            Quero mais vendas
+            className="rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90">
+            
+            Quero vender mais 
           </a>
         </div>
 
@@ -41,34 +41,34 @@ export default function Navbar() {
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden text-foreground"
-          aria-label="Menu"
-        >
+          aria-label="Menu">
+          
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {/* Mobile menu */}
-      {open && (
-        <div className="border-t border-border bg-background px-6 pb-6 pt-4 md:hidden">
-          {navLinks.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              onClick={() => setOpen(false)}
-              className="block py-3 text-sm font-medium text-muted-foreground"
-            >
+      {open &&
+      <div className="border-t border-border bg-background px-6 pb-6 pt-4 md:hidden">
+          {navLinks.map((l) =>
+        <a
+          key={l.href}
+          href={l.href}
+          onClick={() => setOpen(false)}
+          className="block py-3 text-sm font-medium text-muted-foreground">
+          
               {l.label}
             </a>
-          ))}
+        )}
           <a
-            href="#contato"
-            onClick={() => setOpen(false)}
-            className="mt-2 block rounded-lg bg-primary px-5 py-2.5 text-center text-sm font-semibold text-primary-foreground"
-          >
+          href="#contato"
+          onClick={() => setOpen(false)}
+          className="mt-2 block rounded-lg bg-primary px-5 py-2.5 text-center text-sm font-semibold text-primary-foreground">
+          
             Quero mais vendas
           </a>
         </div>
-      )}
-    </nav>
-  );
+      }
+    </nav>);
+
 }
