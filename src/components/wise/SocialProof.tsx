@@ -9,7 +9,7 @@ const cases = [
 { client: "Noelia Store", location: "Brasília, DF", result: "+312% de alcance em 60 dias", logo: noeliaLogo },
 { client: "Barão Apple", location: "Brasília, DF", result: "87 leads qualificados/mês", logo: winStoreLogo },
 { client: "Big Apple", location: "Brasília, DF", result: "+5.200 seguidores em 90 dias", logo: bigAppleLogo },
-{ client: "Cloud Cell", location: "Águas Claras, DF", result: "+180% de faturamento em 45 dias", logo: cloudCellLogo },
+{ client: "Cloud Cell", location: "Brasília, DF", result: "+180% de faturamento em 45 dias", logo: cloudCellLogo },
 { client: "Ícaro Games e Cell", location: "Brasília, DF", result: "62 vendas diretas pelo Instagram", logo: icaroLogo }];
 
 
