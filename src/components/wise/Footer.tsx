@@ -1,3 +1,5 @@
+import wiseLogo from "@/assets/wise-logo.png";
+
 export default function Footer() {
   const whatsappMsg = encodeURIComponent("Olá, tudo bem? Vim do site e queria um atendimento mais rápido.");
   const whatsappUrl = `https://wa.me/5561981504925?text=${whatsappMsg}`;
@@ -7,12 +9,9 @@ export default function Footer() {
       <div className="container flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
         {/* Left */}
         <div>
-          <div className="flex items-center gap-2.5">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-sm font-bold text-primary-foreground">
-              W
-            </div>
-            <span className="text-lg font-black text-primary-foreground">Wise</span>
-          </div>
+          <a href="#" className="inline-block">
+            <img src={wiseLogo} alt="Wise Media" className="h-8 brightness-0 invert" />
+          </a>
           <p className="mt-2 text-sm text-primary-foreground/60">Marketing que vende para lojas de celular.</p>
           <p className="mt-1 text-xs text-primary-foreground/40">© 2026 Wise Agência. Brasília, DF.</p>
         </div>

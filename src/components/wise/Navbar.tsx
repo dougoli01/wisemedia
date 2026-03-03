@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import wiseLogo from "@/assets/wise-logo.png";
 
 const navLinks = [
   { label: "Serviços", href: "#servicos" },
@@ -13,8 +14,8 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-lg">
       <div className="container flex h-16 items-center justify-between">
-        <a href="#" className="text-2xl font-black tracking-tight text-primary">
-          Wise
+        <a href="#" className="flex items-center">
+          <img src={wiseLogo} alt="Wise Media" className="h-8" />
         </a>
 
         {/* Desktop */}
