@@ -1,10 +1,10 @@
 import { MapPin, BarChart3, Share2 } from "lucide-react";
 
 const badges = [
-  { icon: MapPin, label: "Brasília, DF" },
-  { icon: BarChart3, label: "Meta Ads + Google Ads" },
-  { icon: Share2, label: "Gestão de redes" },
-];
+{ icon: MapPin, label: "Brasília, DF" },
+{ icon: BarChart3, label: "Meta Ads + Google Ads" },
+{ icon: Share2, label: "Gestão de redes" }];
+
 
 export default function Hero() {
   return (
@@ -14,7 +14,7 @@ export default function Hero() {
           {/* Left content */}
           <div>
             <h1 className="fade-up text-4xl font-black leading-tight tracking-tight text-primary-foreground md:text-6xl">
-              Mais clientes para sua loja de celular — todos os meses
+              Mais clientes para sua loja de celular todos os meses.
             </h1>
             <p className="fade-up mt-6 max-w-xl text-lg text-primary-foreground/70">
               A Wise atrai compradores reais para sua loja com anúncios que vendem e
@@ -23,28 +23,28 @@ export default function Hero() {
             <div className="fade-up mt-10 flex flex-col gap-4 sm:flex-row">
               <a
                 href="#contato"
-                className="rounded-lg bg-primary px-8 py-3.5 text-center text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-              >
+                className="rounded-lg bg-primary px-8 py-3.5 text-center text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90">
+                
                 Quero mais vendas agora
               </a>
               <a
                 href="#resultados"
-                className="rounded-lg border-2 border-primary-foreground/30 px-8 py-3.5 text-center text-base font-semibold text-primary-foreground transition-colors hover:border-primary-foreground/60"
-              >
+                className="rounded-lg border-2 border-primary-foreground/30 px-8 py-3.5 text-center text-base font-semibold text-primary-foreground transition-colors hover:border-primary-foreground/60">
+                
                 Ver resultados
               </a>
             </div>
             {/* Badges */}
             <div className="fade-up mt-8 flex flex-wrap gap-3">
-              {badges.map((b, i) => (
-                <span
-                  key={i}
-                  className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/10 bg-primary-foreground/5 px-4 py-2 text-sm text-primary-foreground/80"
-                >
+              {badges.map((b, i) =>
+              <span
+                key={i}
+                className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/10 bg-primary-foreground/5 px-4 py-2 text-sm text-primary-foreground/80">
+                
                   <b.icon className="h-3.5 w-3.5 text-primary" />
                   {b.label}
                 </span>
-              ))}
+              )}
             </div>
           </div>
 
@@ -68,8 +68,8 @@ export default function Hero() {
                       fill="none"
                       stroke="hsl(217 100% 55%)"
                       strokeWidth="2.5"
-                      strokeLinecap="round"
-                    />
+                      strokeLinecap="round" />
+                    
                   </svg>
                 </div>
                 <div className="mt-4 flex gap-2">
@@ -93,6 +93,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 }
