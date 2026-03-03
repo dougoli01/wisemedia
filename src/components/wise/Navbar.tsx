@@ -15,7 +15,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-lg">
       <div className="container flex h-16 items-center justify-between">
         <a href="#" className="flex items-center">
-          <img src={wiseLogo} alt="Wise Media" className="h-8" />
+          <img alt="Wise Media" className="h-8" src="/lovable-uploads/d350e726-9b3b-49e9-b71c-f774113bdcbf.png" />
         </a>
 
         {/* Desktop */}
