@@ -2,21 +2,26 @@ import { useState, type FormEvent } from "react";
 
 const WEBHOOK_URL = "https://hook.us2.make.com/v5eq8j444ij2hkti2sfx7513lrby2bmh";
 
-const tiposLoja = ["Loja física", "Escritório ou ponto de venda", "Loja física + online"];
+const trafegOptions = [
+  "Não, nunca investimos",
+  "Sim, já investimos",
+  "Sim, já investimos e nunca tivemos retorno",
+];
 
-function formatPhone(value: string) {
-  const digits = value.replace(/\D/g, "").slice(0, 11);
-  if (digits.length <= 2) return `(${digits}`;
-  if (digits.length <= 7) return `(${digits.slice(0, 2)}) ${digits.slice(2)}`;
-  return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
-}
+const vendasOptions = [
+  "Menos de 40 aparelhos",
+  "Entre 40 a 60 aparelhos",
+  "Entre 60 a 100 aparelhos",
+  "Entre 100 e 200 aparelhos",
+  "Mais de 200 aparelhos",
+];
 
 export default function LeadForm() {
   const [form, setForm] = useState({
     nome: "",
-    whatsapp: "",
-    email: "",
-    tipo_loja: "",
+    instagram: "",
+    ja_rodou_trafego: "",
+    vendas_mes: "",
     mensagem: "",
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -26,10 +31,9 @@ export default function LeadForm() {
   function validate() {
     const e: Record<string, string> = {};
     if (!form.nome.trim()) e.nome = "Informe seu nome";
-    const digits = form.whatsapp.replace(/\D/g, "");
-    if (digits.length < 10) e.whatsapp = "Informe um WhatsApp válido";
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = "Informe um e-mail válido";
-    if (!form.tipo_loja) e.tipo_loja = "Selecione o tipo de loja";
+    if (!form.instagram.trim()) e.instagram = "Informe seu @";
+    if (!form.ja_rodou_trafego) e.ja_rodou_trafego = "Selecione uma opção";
+    if (!form.vendas_mes) e.vendas_mes = "Selecione uma opção";
     setErrors(e);
     return Object.keys(e).length === 0;
   }
@@ -89,48 +93,49 @@ export default function LeadForm() {
             {errors.nome && <p className="mt-1 text-xs text-destructive">{errors.nome}</p>}
           </div>
 
-          {/* WhatsApp */}
+          {/* Instagram */}
           <div>
-            <label className="mb-1.5 block text-sm font-medium">WhatsApp *</label>
+            <label className="mb-1.5 block text-sm font-medium">@ do Instagram *</label>
             <input
-              type="tel"
-              value={form.whatsapp}
-              onChange={(e) => setForm({ ...form, whatsapp: formatPhone(e.target.value) })}
+              type="text"
+              value={form.instagram}
+              onChange={(e) => setForm({ ...form, instagram: e.target.value })}
               className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-ring/20"
-              placeholder="(XX) XXXXX-XXXX"
+              placeholder="@sualoja"
             />
-            {errors.whatsapp && <p className="mt-1 text-xs text-destructive">{errors.whatsapp}</p>}
+            {errors.instagram && <p className="mt-1 text-xs text-destructive">{errors.instagram}</p>}
           </div>
 
-          {/* E-mail */}
+          {/* Já rodou tráfego */}
           <div>
-            <label className="mb-1.5 block text-sm font-medium">E-mail *</label>
-            <input
-              type="email"
-              value={form.email}
-              onChange={(e) => setForm({ ...form, email: e.target.value })}
-              className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-ring/20"
-              placeholder="seu@email.com"
-            />
-            {errors.email && <p className="mt-1 text-xs text-destructive">{errors.email}</p>}
-          </div>
-
-          {/* Tipo de loja */}
-          <div>
-            <label className="mb-1.5 block text-sm font-medium">Tipo de loja *</label>
+            <label className="mb-1.5 block text-sm font-medium">Já investiu em tráfego pago? *</label>
             <select
-              value={form.tipo_loja}
-              onChange={(e) => setForm({ ...form, tipo_loja: e.target.value })}
+              value={form.ja_rodou_trafego}
+              onChange={(e) => setForm({ ...form, ja_rodou_trafego: e.target.value })}
               className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-ring/20"
             >
               <option value="">Selecione...</option>
-              {tiposLoja.map((t) => (
-                <option key={t} value={t}>
-                  {t}
-                </option>
+              {trafegOptions.map((t) => (
+                <option key={t} value={t}>{t}</option>
               ))}
             </select>
-            {errors.tipo_loja && <p className="mt-1 text-xs text-destructive">{errors.tipo_loja}</p>}
+            {errors.ja_rodou_trafego && <p className="mt-1 text-xs text-destructive">{errors.ja_rodou_trafego}</p>}
+          </div>
+
+          {/* Vendas por mês */}
+          <div>
+            <label className="mb-1.5 block text-sm font-medium">Nº de vendas de celular por mês *</label>
+            <select
+              value={form.vendas_mes}
+              onChange={(e) => setForm({ ...form, vendas_mes: e.target.value })}
+              className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-ring/20"
+            >
+              <option value="">Selecione...</option>
+              {vendasOptions.map((t) => (
+                <option key={t} value={t}>{t}</option>
+              ))}
+            </select>
+            {errors.vendas_mes && <p className="mt-1 text-xs text-destructive">{errors.vendas_mes}</p>}
           </div>
 
           {/* Mensagem */}
