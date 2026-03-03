@@ -125,7 +125,7 @@ export default function LeadForm() {
               className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-ring/20"
               placeholder="seu@email.com"
             />
-            {errors.email && <p className="mt-1 text-xs text-destructive">{errors.nome}</p>}
+            {errors.email && <p className="mt-1 text-xs text-destructive">{errors.email}</p>}
           </div>
 
           {/* Tipo de loja */}
