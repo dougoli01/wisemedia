@@ -1,11 +1,16 @@
 import { useEffect, useState } from "react";
+import noeliaLogo from "@/assets/clients/noelia.png";
+import winStoreLogo from "@/assets/clients/win-store.png";
+import bigAppleLogo from "@/assets/clients/big-apple.png";
+import cloudCellLogo from "@/assets/clients/cloud-cell.png";
+import icaroLogo from "@/assets/clients/icaro.png";
 
 const cases = [
-  { client: "CelularMix", location: "Taguatinga, DF", result: "+312% de alcance em 60 dias", logo: "" },
-  { client: "SmartPhone Center", location: "Goiânia, GO", result: "87 leads qualificados/mês", logo: "" },
-  { client: "TechPoint Celulares", location: "Brasília, DF", result: "+5.200 seguidores em 90 dias", logo: "" },
-  { client: "MegaCell", location: "Águas Claras, DF", result: "+180% de faturamento em 45 dias", logo: "" },
-  { client: "Phone House", location: "Anápolis, GO", result: "62 vendas diretas pelo Instagram", logo: "" },
+  { client: "Noelia Store", location: "Brasília, DF", result: "+312% de alcance em 60 dias", logo: noeliaLogo },
+  { client: "Win Store", location: "Goiânia, GO", result: "87 leads qualificados/mês", logo: winStoreLogo },
+  { client: "Big Apple", location: "Taguatinga, DF", result: "+5.200 seguidores em 90 dias", logo: bigAppleLogo },
+  { client: "Cloud Cell", location: "Águas Claras, DF", result: "+180% de faturamento em 45 dias", logo: cloudCellLogo },
+  { client: "Ícaro Celulares", location: "Anápolis, GO", result: "62 vendas diretas pelo Instagram", logo: icaroLogo },
   { client: "Digital Store", location: "Samambaia, DF", result: "+420% de engajamento orgânico", logo: "" },
   { client: "TopCell Acessórios", location: "Valparaíso, GO", result: "ROI de 8x em campanhas Meta", logo: "" },
 ];
