@@ -10,15 +10,56 @@ const cases = [
   { client: "TopCell Acessórios", location: "Valparaíso, GO", result: "ROI de 8x em campanhas Meta", logo: "" },
 ];
 
+// Triple the array for infinite illusion
+const extendedCases = [...cases, ...cases, ...cases];
+
+function Card({ c }: { c: (typeof cases)[0] }) {
+  return (
+    <div className="w-1/3 flex-shrink-0 px-3">
+      <div className="rounded-2xl border border-border bg-card p-8 text-center">
+        <div className="mx-auto mb-5 flex h-24 w-24 items-center justify-center overflow-hidden rounded-2xl border border-border bg-muted">
+          {c.logo ? (
+            <img src={c.logo} alt={`Logo ${c.client}`} className="h-full w-full object-contain p-2" />
+          ) : (
+            <span className="text-sm font-bold text-muted-foreground">LOGO</span>
+          )}
+        </div>
+        <p className="text-sm font-semibold text-muted-foreground">
+          {c.client} — {c.location}
+        </p>
+        <p className="mt-3 text-xl font-black text-primary md:text-2xl">{c.result}</p>
+      </div>
+    </div>
+  );
+}
+
 export default function SocialProof() {
-  const [current, setCurrent] = useState(0);
+  const [offset, setOffset] = useState(cases.length); // start at first clone set
+  const [transition, setTransition] = useState(true);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % cases.length);
+      setOffset((prev) => prev + 1);
     }, 3000);
     return () => clearInterval(timer);
   }, []);
+
+  // When we reach the end of the second set, silently jump back
+  useEffect(() => {
+    if (offset >= cases.length * 2) {
+      const timeout = setTimeout(() => {
+        setTransition(false);
+        setOffset(cases.length);
+        // Re-enable transition on next frame
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => setTransition(true));
+        });
+      }, 700);
+      return () => clearTimeout(timeout);
+    }
+  }, [offset]);
+
+  const translateX = -(offset * (100 / 3));
 
   return (
     <section id="resultados" className="bg-muted py-20 md:py-28">
@@ -27,17 +68,34 @@ export default function SocialProof() {
           Lojas de celular que já cresceram com a Wise
         </h2>
 
-        {/* Carousel */}
-        <div className="fade-up relative mt-14 overflow-hidden">
+        {/* Desktop: 3 cards */}
+        <div className="fade-up relative mt-14 hidden overflow-hidden md:block">
           <div
-            className="flex transition-transform duration-700 ease-in-out"
-            style={{ transform: `translateX(-${current * 100}%)` }}
+            className="flex"
+            style={{
+              transform: `translateX(${translateX}%)`,
+              transition: transition ? "transform 700ms ease-in-out" : "none",
+            }}
           >
-            {cases.map((c, i) => (
-              <div key={i} className="w-full flex-shrink-0 px-4">
-                <div className="mx-auto max-w-md rounded-2xl border border-border bg-card p-10 text-center">
-                  {/* Logo */}
-                  <div className="mx-auto mb-6 flex h-28 w-28 items-center justify-center overflow-hidden rounded-2xl border border-border bg-muted">
+            {extendedCases.map((c, i) => (
+              <Card key={i} c={c} />
+            ))}
+          </div>
+        </div>
+
+        {/* Mobile: 1 card */}
+        <div className="fade-up relative mt-14 overflow-hidden md:hidden">
+          <div
+            className="flex"
+            style={{
+              transform: `translateX(${-(offset * 100)}%)`,
+              transition: transition ? "transform 700ms ease-in-out" : "none",
+            }}
+          >
+            {extendedCases.map((c, i) => (
+              <div key={i} className="w-full flex-shrink-0 px-2">
+                <div className="rounded-2xl border border-border bg-card p-8 text-center">
+                  <div className="mx-auto mb-5 flex h-24 w-24 items-center justify-center overflow-hidden rounded-2xl border border-border bg-muted">
                     {c.logo ? (
                       <img src={c.logo} alt={`Logo ${c.client}`} className="h-full w-full object-contain p-2" />
                     ) : (
@@ -47,23 +105,9 @@ export default function SocialProof() {
                   <p className="text-sm font-semibold text-muted-foreground">
                     {c.client} — {c.location}
                   </p>
-                  <p className="mt-4 text-2xl font-black text-primary">{c.result}</p>
+                  <p className="mt-3 text-xl font-black text-primary">{c.result}</p>
                 </div>
               </div>
-            ))}
-          </div>
-
-          {/* Dots */}
-          <div className="mt-8 flex justify-center gap-2">
-            {cases.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrent(i)}
-                className={`h-2.5 rounded-full transition-all duration-300 ${
-                  i === current ? "w-8 bg-primary" : "w-2.5 bg-border"
-                }`}
-                aria-label={`Slide ${i + 1}`}
-              />
             ))}
           </div>
         </div>
