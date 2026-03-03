@@ -1,4 +1,4 @@
-import { Target, Megaphone } from "lucide-react";
+import { Target, Megaphone, GraduationCap, Users, Database, Palette } from "lucide-react";
 
 const services = [
   {
@@ -6,7 +6,7 @@ const services = [
     title: "Tráfego Pago",
     subtitle: "Meta Ads & Google Ads",
     items: [
-      "Campanhas direcionadas para compradores da sua região",
+      "Campanhas no Instagram e Facebook para compradores da sua região",
       "Anúncios no Google quando o cliente pesquisa 'loja de celular perto'",
       "Retargeting para quem visitou seu perfil mas não comprou",
       "Relatórios semanais com métricas reais de vendas",
@@ -23,6 +23,50 @@ const services = [
       "Respostas estratégicas nos comentários e DM",
     ],
   },
+  {
+    icon: GraduationCap,
+    title: "Treinamento Comercial",
+    subtitle: "Capacitação da equipe",
+    items: [
+      "Treinamento de vendas para sua equipe de atendimento",
+      "Scripts de abordagem para WhatsApp e loja física",
+      "Técnicas de fechamento e upsell de acessórios",
+      "Acompanhamento contínuo da evolução do time",
+    ],
+  },
+  {
+    icon: Users,
+    title: "Acompanhamento Comercial",
+    subtitle: "Consultoria estratégica",
+    items: [
+      "Reuniões periódicas de performance e resultados",
+      "Análise de métricas de vendas e conversão",
+      "Ajustes estratégicos baseados em dados reais",
+      "Suporte direto com a equipe Wise",
+    ],
+  },
+  {
+    icon: Database,
+    title: "CRM",
+    subtitle: "Gestão de clientes",
+    items: [
+      "Organização de leads e clientes em funil de vendas",
+      "Automação de follow-up via WhatsApp",
+      "Histórico de interações e compras de cada cliente",
+      "Relatórios de conversão e retenção",
+    ],
+  },
+  {
+    icon: Palette,
+    title: "Design",
+    subtitle: "Edição de fotos e vídeos",
+    items: [
+      "Edição profissional de fotos de produtos",
+      "Criação de vídeos para Reels e Stories",
+      "Artes para promoções, banners e catálogos",
+      "Identidade visual alinhada à sua marca",
+    ],
+  },
 ];
 
 export default function Services() {
@@ -32,7 +76,7 @@ export default function Services() {
         <h2 className="fade-up text-center text-3xl font-bold tracking-tight md:text-4xl">
           O que a Wise faz pela sua loja
         </h2>
-        <div className="mt-14 grid gap-8 md:grid-cols-2">
+        <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((s, i) => (
             <div
               key={i}

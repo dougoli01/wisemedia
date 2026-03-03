@@ -3,16 +3,19 @@ const cases = [
     client: "CelularMix — Taguatinga, DF",
     result: "+312% de alcance em 60 dias",
     desc: "Com tráfego pago local e conteúdo diário, a loja triplicou o alcance e bateu recorde de vendas no trimestre.",
+    logo: "",
   },
   {
     client: "SmartPhone Center — Goiânia, GO",
     result: "87 leads qualificados/mês",
-    desc: "Campanhas no Google Ads geraram contatos quentes diretamente no WhatsApp da loja, com custo por lead abaixo de R$5.",
+    desc: "Campanhas no Meta Ads geraram contatos quentes diretamente no WhatsApp da loja, com custo por lead abaixo de R$5.",
+    logo: "",
   },
   {
     client: "TechPoint Celulares — Brasília, DF",
     result: "+5.200 seguidores em 90 dias",
     desc: "Gestão de redes sociais transformou o perfil da loja em referência local de acessórios e assistência técnica.",
+    logo: "",
   },
 ];
 
@@ -29,6 +32,14 @@ export default function SocialProof() {
               key={i}
               className="fade-up rounded-2xl border border-border bg-card p-8"
             >
+              {/* Logo placeholder */}
+              <div className="mb-5 flex h-16 w-16 items-center justify-center overflow-hidden rounded-xl border border-border bg-muted">
+                {c.logo ? (
+                  <img src={c.logo} alt={`Logo ${c.client}`} className="h-full w-full object-contain p-1" />
+                ) : (
+                  <span className="text-xs font-bold text-muted-foreground">LOGO</span>
+                )}
+              </div>
               <p className="text-sm font-semibold text-muted-foreground">{c.client}</p>
               <p className="mt-4 text-2xl font-black text-primary">{c.result}</p>
               <p className="mt-3 text-muted-foreground leading-relaxed">{c.desc}</p>
