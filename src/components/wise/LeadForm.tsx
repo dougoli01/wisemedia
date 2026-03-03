@@ -93,48 +93,49 @@ export default function LeadForm() {
             {errors.nome && <p className="mt-1 text-xs text-destructive">{errors.nome}</p>}
           </div>
 
-          {/* WhatsApp */}
+          {/* Instagram */}
           <div>
-            <label className="mb-1.5 block text-sm font-medium">WhatsApp *</label>
+            <label className="mb-1.5 block text-sm font-medium">@ do Instagram *</label>
             <input
-              type="tel"
-              value={form.whatsapp}
-              onChange={(e) => setForm({ ...form, whatsapp: formatPhone(e.target.value) })}
+              type="text"
+              value={form.instagram}
+              onChange={(e) => setForm({ ...form, instagram: e.target.value })}
               className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-ring/20"
-              placeholder="(XX) XXXXX-XXXX"
+              placeholder="@sualoja"
             />
-            {errors.whatsapp && <p className="mt-1 text-xs text-destructive">{errors.whatsapp}</p>}
+            {errors.instagram && <p className="mt-1 text-xs text-destructive">{errors.instagram}</p>}
           </div>
 
-          {/* E-mail */}
+          {/* Já rodou tráfego */}
           <div>
-            <label className="mb-1.5 block text-sm font-medium">E-mail *</label>
-            <input
-              type="email"
-              value={form.email}
-              onChange={(e) => setForm({ ...form, email: e.target.value })}
-              className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-ring/20"
-              placeholder="seu@email.com"
-            />
-            {errors.email && <p className="mt-1 text-xs text-destructive">{errors.email}</p>}
-          </div>
-
-          {/* Tipo de loja */}
-          <div>
-            <label className="mb-1.5 block text-sm font-medium">Tipo de loja *</label>
+            <label className="mb-1.5 block text-sm font-medium">Já investiu em tráfego pago? *</label>
             <select
-              value={form.tipo_loja}
-              onChange={(e) => setForm({ ...form, tipo_loja: e.target.value })}
+              value={form.ja_rodou_trafego}
+              onChange={(e) => setForm({ ...form, ja_rodou_trafego: e.target.value })}
               className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-ring/20"
             >
               <option value="">Selecione...</option>
-              {tiposLoja.map((t) => (
-                <option key={t} value={t}>
-                  {t}
-                </option>
+              {trafegOptions.map((t) => (
+                <option key={t} value={t}>{t}</option>
               ))}
             </select>
-            {errors.tipo_loja && <p className="mt-1 text-xs text-destructive">{errors.tipo_loja}</p>}
+            {errors.ja_rodou_trafego && <p className="mt-1 text-xs text-destructive">{errors.ja_rodou_trafego}</p>}
+          </div>
+
+          {/* Vendas por mês */}
+          <div>
+            <label className="mb-1.5 block text-sm font-medium">Nº de vendas de celular por mês *</label>
+            <select
+              value={form.vendas_mes}
+              onChange={(e) => setForm({ ...form, vendas_mes: e.target.value })}
+              className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-ring/20"
+            >
+              <option value="">Selecione...</option>
+              {vendasOptions.map((t) => (
+                <option key={t} value={t}>{t}</option>
+              ))}
+            </select>
+            {errors.vendas_mes && <p className="mt-1 text-xs text-destructive">{errors.vendas_mes}</p>}
           </div>
 
           {/* Mensagem */}
