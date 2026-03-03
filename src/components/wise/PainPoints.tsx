@@ -9,7 +9,7 @@ const pains = [
   {
     icon: DollarSign,
     title: "Anúncios que só gastam",
-    desc: "Você já tentou impulsionar posts, mas o dinheiro vai e os clientes não aparecem.",
+    desc: "Você já tentou impulsionar posts no Meta Ads, mas o dinheiro vai e os clientes não aparecem.",
   },
   {
     icon: Clock,
