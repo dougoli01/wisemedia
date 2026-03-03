@@ -22,7 +22,7 @@ function Card({ c }: {c: (typeof cases)[0];}) {
       <div className="rounded-2xl border border-border bg-card p-8 text-center">
         <div className="mx-auto mb-5 flex h-24 w-24 items-center justify-center overflow-hidden rounded-2xl border border-border bg-muted">
           {c.logo ?
-          <img src={c.logo} alt={`Logo ${c.client}`} className="h-full w-full p-2 object-fill" /> :
+          <img src={c.logo} alt={`Logo ${c.client}`} className="h-full w-full p-2 object-contain" /> :
 
           <span className="text-sm font-bold text-muted-foreground">LOGO</span>
           }
