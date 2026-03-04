@@ -173,7 +173,7 @@ export default function LeadForm() {
 
           {/* Mensagem */}
           <div>
-            <label className="mb-1.5 block text-sm font-medium">Mensagem (opcional)</label>
+            <label className="mb-1.5 block text-sm font-medium text-primary-foreground">Mensagem (opcional)</label>
             <textarea
               value={form.mensagem}
               onChange={(e) => setForm({ ...form, mensagem: e.target.value })}
