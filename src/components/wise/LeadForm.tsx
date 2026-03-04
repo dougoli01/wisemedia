@@ -64,7 +64,7 @@ export default function LeadForm() {
 
 
       // still show success — webhook may be configured later
-    }setLoading(false);setSent(true);}if (sent) {return <section id="contato" className="bg-muted py-20 md:py-28">
+    }setLoading(false);setSent(true);}if (sent) {return <section id="contato" className="gradient-hero py-20 md:py-28">
         <div className="container max-w-xl text-center">
           <div className="rounded-2xl border border-primary/20 bg-primary/5 p-10">
           <h3 className="text-2xl font-bold text-primary">Recebemos seu contato!</h3>
@@ -94,17 +94,17 @@ export default function LeadForm() {
   }
 
   return (
-    <section id="contato" className="bg-muted py-20 md:py-28">
+    <section id="contato" className="gradient-hero py-20 md:py-28">
       <div className="container max-w-xl">
-        <h2 className="fade-up text-center text-3xl font-bold tracking-tight md:text-4xl">Fale com a Wise</h2>
-        <p className="fade-up mt-3 text-center text-muted-foreground">
+        <h2 className="fade-up text-center text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl">Fale com a Wise</h2>
+        <p className="fade-up mt-3 text-center text-primary-foreground/70">
           Preencha o formulário e entraremos em contato por ligação.
         </p>
 
         <form onSubmit={handleSubmit} className="fade-up mt-10 space-y-5">
           {/* Nome */}
           <div>
-            <label className="mb-1.5 block text-sm font-medium">Nome completo *</label>
+            <label className="mb-1.5 block text-sm font-medium text-primary-foreground">Nome completo *</label>
             <input
               type="text"
               value={form.nome}
@@ -117,7 +117,7 @@ export default function LeadForm() {
 
           {/* Telefone */}
           <div>
-            <label className="mb-1.5 block text-sm font-medium">Telefone (WhatsApp) *</label>
+            <label className="mb-1.5 block text-sm font-medium text-primary-foreground">Telefone (WhatsApp) *</label>
             <input
               type="tel"
               value={form.telefone}
@@ -128,7 +128,7 @@ export default function LeadForm() {
           </div>
 
           <div>
-            <label className="mb-1.5 block text-sm font-medium">@ do Instagram *</label>
+            <label className="mb-1.5 block text-sm font-medium text-primary-foreground">@ do Instagram *</label>
             <input
               type="text"
               value={form.instagram}
@@ -141,7 +141,7 @@ export default function LeadForm() {
 
           {/* Já rodou tráfego */}
           <div>
-            <label className="mb-1.5 block text-sm font-medium">Já investiu em tráfego pago? *</label>
+            <label className="mb-1.5 block text-sm font-medium text-primary-foreground">Já investiu em tráfego pago? *</label>
             <select
               value={form.ja_rodou_trafego}
               onChange={(e) => setForm({ ...form, ja_rodou_trafego: e.target.value })}
@@ -157,7 +157,7 @@ export default function LeadForm() {
 
           {/* Vendas por mês */}
           <div>
-            <label className="mb-1.5 block text-sm font-medium">Nº de vendas de celular por mês *</label>
+            <label className="mb-1.5 block text-sm font-medium text-primary-foreground">Nº de vendas de celular por mês *</label>
             <select
               value={form.vendas_mes}
               onChange={(e) => setForm({ ...form, vendas_mes: e.target.value })}
@@ -173,7 +173,7 @@ export default function LeadForm() {
 
           {/* Mensagem */}
           <div>
-            <label className="mb-1.5 block text-sm font-medium">Mensagem (opcional)</label>
+            <label className="mb-1.5 block text-sm font-medium text-primary-foreground">Mensagem (opcional)</label>
             <textarea
               value={form.mensagem}
               onChange={(e) => setForm({ ...form, mensagem: e.target.value })}
