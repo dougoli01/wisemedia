@@ -1,3 +1,17 @@
+import depoimento1 from "@/assets/testimonials/depoimento-1.png";
+import depoimento2 from "@/assets/testimonials/depoimento-2.png";
+import depoimento3 from "@/assets/testimonials/depoimento-3.png";
+import depoimento4 from "@/assets/testimonials/depoimento-4.png";
+import depoimento5 from "@/assets/testimonials/depoimento-5.png";
+
+const testimonials = [
+  { src: depoimento1, caption: "164 registros de venda em um mês" },
+  { src: depoimento2, caption: "85 aparelhos vendidos em dezembro" },
+  { src: depoimento3, caption: "150 aparelhos vendidos no mês" },
+  { src: depoimento4, caption: "Cliente lotada pedindo pra segurar o tráfego" },
+  { src: depoimento5, caption: "Bateram a meta de 40k em vendas" },
+];
+
 export default function Testimonials() {
   return (
     <section id="depoimentos" className="bg-muted py-20 md:py-28">
@@ -6,25 +20,26 @@ export default function Testimonials() {
           O que nossos clientes dizem
         </h2>
         <p className="fade-up mt-3 text-center text-muted-foreground">
-          Veja prints reais de quem já cresceu com a Wise
+          Prints reais de quem já cresceu com a Wise
         </p>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
-          {[1, 2, 3].map((i) => (
+        <div className="mt-14 flex flex-wrap justify-center gap-6">
+          {testimonials.map((t, i) => (
             <div
               key={i}
-              className="fade-up flex aspect-[9/16] max-h-[480px] items-center justify-center rounded-2xl border border-border bg-card"
+              className="fade-up flex w-[260px] flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-transform hover:scale-[1.02]"
             >
-              <div className="text-center text-muted-foreground">
-                <div className="mx-auto mb-3 flex h-16 w-16 items-center justify-center rounded-full bg-background">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-                    <circle cx="8.5" cy="8.5" r="1.5" />
-                    <polyline points="21 15 16 10 5 21" />
-                  </svg>
-                </div>
-                <p className="text-sm font-medium">Print {i}</p>
+              <div className="flex-1 overflow-hidden">
+                <img
+                  src={t.src}
+                  alt={t.caption}
+                  className="h-full w-full object-cover"
+                  loading="lazy"
+                />
               </div>
+              <p className="px-4 py-3 text-center text-sm font-medium text-muted-foreground">
+                {t.caption}
+              </p>
             </div>
           ))}
         </div>
