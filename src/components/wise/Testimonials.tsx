@@ -6,7 +6,7 @@ import depoimento5 from "@/assets/testimonials/depoimento-5.png";
 
 const testimonials = [
   { src: depoimento1, caption: "164 registros de venda em um mês" },
-  { src: depoimento2, caption: "85 aparelhos vendidos em dezembro" },
+  { src: depoimento2, caption: "85 aparelhos vendidos em um mês através do tráfego" },
   { src: depoimento3, caption: "150 aparelhos vendidos no mês" },
   { src: depoimento4, caption: "Cliente lotada pedindo pra segurar o tráfego" },
   { src: depoimento5, caption: "Bateram a meta de 40k de LUCRO em vendas" },
