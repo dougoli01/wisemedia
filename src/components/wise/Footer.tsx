@@ -5,7 +5,7 @@ export default function Footer() {
   const whatsappUrl = `https://wa.me/5561981504925?text=${whatsappMsg}`;
 
   return (
-    <footer className="border-t border-border bg-wise-black py-10">
+    <footer className="border-t border-border bg-wise-black py-10 border-0">
       <div className="container flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
         {/* Left */}
         <div>
