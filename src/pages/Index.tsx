@@ -6,6 +6,7 @@ import Services from "@/components/wise/Services";
 import SocialProof from "@/components/wise/SocialProof";
 import CtaBanner from "@/components/wise/CtaBanner";
 import LeadForm from "@/components/wise/LeadForm";
+import Testimonials from "@/components/wise/Testimonials";
 import Footer from "@/components/wise/Footer";
 
 const Index = () => {
@@ -16,10 +17,11 @@ const Index = () => {
       <Navbar />
       <Hero />
       <PainPoints />
-      <Services />
       <SocialProof />
-      <CtaBanner />
       <LeadForm />
+      <Services />
+      <Testimonials />
+      <CtaBanner />
       <Footer />
     </>
   );
