@@ -13,8 +13,10 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+  const duplicated = [...testimonials, ...testimonials];
+
   return (
-    <section id="depoimentos" className="gradient-hero py-20 md:py-28">
+    <section id="depoimentos" className="gradient-hero py-20 md:py-28 overflow-hidden">
       <div className="container">
         <h2 className="fade-up text-center text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl">
           O que nossos clientes dizem
@@ -22,12 +24,17 @@ export default function Testimonials() {
         <p className="fade-up mt-3 text-center text-primary-foreground/70">
           Prints reais de quem já cresceu com a Wise
         </p>
+      </div>
 
-        <div className="mt-14 flex flex-wrap justify-center gap-6">
-          {testimonials.map((t, i) => (
+      <div className="fade-up relative mt-14 overflow-hidden">
+        <div
+          className="animate-scroll-left flex w-max"
+          style={{ "--scroll-duration": "35s" } as React.CSSProperties}
+        >
+          {duplicated.map((t, i) => (
             <div
               key={i}
-              className="fade-up flex w-[260px] flex-col overflow-hidden rounded-2xl border border-primary-foreground/10 bg-primary-foreground/5 shadow-lg backdrop-blur-sm transition-transform hover:scale-[1.02]"
+              className="w-[260px] flex-shrink-0 mx-3 flex flex-col overflow-hidden rounded-2xl border border-primary-foreground/10 bg-primary-foreground/5 shadow-lg backdrop-blur-sm transition-transform hover:scale-[1.02]"
             >
               <div className="flex-1 overflow-hidden">
                 <img
