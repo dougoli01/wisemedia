@@ -104,7 +104,7 @@ export default function LeadForm() {
         <form onSubmit={handleSubmit} className="fade-up mt-10 space-y-5">
           {/* Nome */}
           <div>
-            <label className="mb-1.5 block text-sm font-medium">Nome completo *</label>
+            <label className="mb-1.5 block text-sm font-medium text-primary-foreground">Nome completo *</label>
             <input
               type="text"
               value={form.nome}
