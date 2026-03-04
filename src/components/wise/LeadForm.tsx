@@ -19,6 +19,7 @@ const vendasOptions = [
 export default function LeadForm() {
   const [form, setForm] = useState({
     nome: "",
+    telefone: "",
     instagram: "",
     ja_rodou_trafego: "",
     vendas_mes: "",
@@ -31,6 +32,7 @@ export default function LeadForm() {
   function validate() {
     const e: Record<string, string> = {};
     if (!form.nome.trim()) e.nome = "Informe seu nome";
+    if (!form.telefone.trim()) e.telefone = "Informe seu telefone";
     if (!form.instagram.trim()) e.instagram = "Informe seu @";
     if (!form.ja_rodou_trafego) e.ja_rodou_trafego = "Selecione uma opção";
     if (!form.vendas_mes) e.vendas_mes = "Selecione uma opção";
@@ -113,7 +115,18 @@ export default function LeadForm() {
             {errors.nome && <p className="mt-1 text-xs text-destructive">{errors.nome}</p>}
           </div>
 
-          {/* Instagram */}
+          {/* Telefone */}
+          <div>
+            <label className="mb-1.5 block text-sm font-medium">Telefone (WhatsApp) *</label>
+            <input
+              type="tel"
+              value={form.telefone}
+              onChange={(e) => setForm({ ...form, telefone: e.target.value })}
+              className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-ring/20"
+              placeholder="(00) 00000-0000" />
+            {errors.telefone && <p className="mt-1 text-xs text-destructive">{errors.telefone}</p>}
+          </div>
+
           <div>
             <label className="mb-1.5 block text-sm font-medium">@ do Instagram *</label>
             <input
