@@ -45,7 +45,7 @@ const services = [
     title: "CRM",
     subtitle: "Pare de perder cliente por falta de follow-up",
     items: [
-      "Organização de leads e clientes em funil de vendas",
+      "Todos os seus leads organizados num funil visual, fácil de acompanhar",
       "Automação de follow-up via WhatsApp",
       "Histórico de interações e compras de cada cliente",
       "Relatórios de conversão e retenção",
