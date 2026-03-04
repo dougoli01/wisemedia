@@ -98,9 +98,6 @@
   animation: scroll-left var(--scroll-duration, 30s) linear infinite;
 }
 
-.animate-scroll-left:hover {
-  animation-play-state: paused;
-}
 
 #lovable-badge {
   display: none !important;
