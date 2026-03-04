@@ -128,7 +128,7 @@ export default function LeadForm() {
           </div>
 
           <div>
-            <label className="mb-1.5 block text-sm font-medium">@ do Instagram *</label>
+            <label className="mb-1.5 block text-sm font-medium text-primary-foreground">@ do Instagram *</label>
             <input
               type="text"
               value={form.instagram}
