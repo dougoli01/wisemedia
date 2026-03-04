@@ -64,7 +64,7 @@ export default function LeadForm() {
 
 
       // still show success — webhook may be configured later
-    }setLoading(false);setSent(true);}if (sent) {return <section id="contato" className="py-20 md:py-28">
+    }setLoading(false);setSent(true);}if (sent) {return <section id="contato" className="bg-muted py-20 md:py-28">
         <div className="container max-w-xl text-center">
           <div className="rounded-2xl border border-primary/20 bg-primary/5 p-10">
           <h3 className="text-2xl font-bold text-primary">Recebemos seu contato!</h3>
@@ -94,7 +94,7 @@ export default function LeadForm() {
   }
 
   return (
-    <section id="contato" className="py-20 md:py-28">
+    <section id="contato" className="bg-muted py-20 md:py-28">
       <div className="container max-w-xl">
         <h2 className="fade-up text-center text-3xl font-bold tracking-tight md:text-4xl">Fale com a Wise</h2>
         <p className="fade-up mt-3 text-center text-muted-foreground">
