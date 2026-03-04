@@ -57,7 +57,7 @@ const services = [
     subtitle: "Sua marca tão boa quanto o produto que você vende",
     items: [
       "Edição profissional de fotos de produtos",
-      "Criação de vídeos para Reels e Stories",
+      "Reels e Stories criados pra gerar desejo e movimento no perfil",
       "Artes para promoções, banners e catálogos",
       "Identidade visual alinhada à sua marca",
     ],
