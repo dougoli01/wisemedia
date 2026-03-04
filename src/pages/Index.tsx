@@ -1,5 +1,6 @@
 import { useFadeIn } from "@/hooks/useFadeIn";
 import Navbar from "@/components/wise/Navbar";
+import TopBanner from "@/components/wise/TopBanner";
 import Hero from "@/components/wise/Hero";
 import PainPoints from "@/components/wise/PainPoints";
 import Services from "@/components/wise/Services";
@@ -14,6 +15,7 @@ const Index = () => {
 
   return (
     <>
+      <TopBanner />
       <Navbar />
       <Hero />
       <PainPoints />
