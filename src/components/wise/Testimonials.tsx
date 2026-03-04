@@ -14,12 +14,12 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="depoimentos" className="bg-muted py-20 md:py-28">
+    <section id="depoimentos" className="gradient-hero py-20 md:py-28">
       <div className="container">
-        <h2 className="fade-up text-center text-3xl font-bold tracking-tight md:text-4xl">
+        <h2 className="fade-up text-center text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl">
           O que nossos clientes dizem
         </h2>
-        <p className="fade-up mt-3 text-center text-muted-foreground">
+        <p className="fade-up mt-3 text-center text-primary-foreground/70">
           Prints reais de quem já cresceu com a Wise
         </p>
 
@@ -27,7 +27,7 @@ export default function Testimonials() {
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className="fade-up flex w-[260px] flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-transform hover:scale-[1.02]"
+              className="fade-up flex w-[260px] flex-col overflow-hidden rounded-2xl border border-primary-foreground/10 bg-primary-foreground/5 shadow-lg backdrop-blur-sm transition-transform hover:scale-[1.02]"
             >
               <div className="flex-1 overflow-hidden">
                 <img
@@ -37,7 +37,7 @@ export default function Testimonials() {
                   loading="lazy"
                 />
               </div>
-              <p className="px-4 py-3 text-center text-sm font-medium text-muted-foreground">
+              <p className="px-4 py-3 text-center text-sm font-medium text-primary-foreground/80">
                 {t.caption}
               </p>
             </div>

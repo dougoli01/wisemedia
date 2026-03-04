@@ -1,11 +1,11 @@
 export default function CtaBanner() {
   return (
-    <section className="gradient-hero py-20 md:py-24">
+    <section className="bg-muted py-20 md:py-24">
       <div className="container text-center">
-        <h2 className="fade-up text-3xl font-bold text-primary-foreground md:text-4xl">
+        <h2 className="fade-up text-3xl font-bold text-foreground md:text-4xl">
           Pronto para sua loja vender mais?
         </h2>
-        <p className="fade-up mt-4 text-lg text-primary-foreground/80">
+        <p className="fade-up mt-4 text-lg text-muted-foreground">
           Fale com a Wise e receba uma proposta personalizada.
         </p>
         <a
