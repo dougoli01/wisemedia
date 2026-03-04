@@ -94,10 +94,10 @@ export default function LeadForm() {
   }
 
   return (
-    <section id="contato" className="bg-muted py-20 md:py-28">
+    <section id="contato" className="gradient-hero py-20 md:py-28">
       <div className="container max-w-xl">
-        <h2 className="fade-up text-center text-3xl font-bold tracking-tight md:text-4xl">Fale com a Wise</h2>
-        <p className="fade-up mt-3 text-center text-muted-foreground">
+        <h2 className="fade-up text-center text-3xl font-bold tracking-tight text-primary-foreground md:text-4xl">Fale com a Wise</h2>
+        <p className="fade-up mt-3 text-center text-primary-foreground/70">
           Preencha o formulário e entraremos em contato por ligação.
         </p>
 
