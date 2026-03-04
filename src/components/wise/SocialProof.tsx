@@ -11,7 +11,7 @@ const cases = [
   { client: "Barão Apple", location: "Brasília, DF", result: "Estruturação digital e aumento das vendas", logo: winStoreLogo },
   { client: "Big Apple", location: "Brasília, DF", result: "+120% de vendas pelo tráfego", logo: bigAppleLogo },
   { client: "Cloud Cell", location: "Brasília, DF", result: "+ de 100 vendas mês", logo: cloudCellLogo },
-  { client: "Ícaro Games e Cell", location: "Brasília, DF", result: "+ 150 vendas mês", logo: icaroLogo },
+  { client: "Ícaro Games e Cell", location: "Brasília, DF", result: "+ de 150 vendas mês", logo: icaroLogo },
   { client: "Aurion", location: "Cabo Frio, RJ", result: "+130% de crescimento nas redes", logo: aurionLogo },
   { client: "Mister Case", location: "Belo Horizonte, BH", result: "+117% de crescimento nas vendas", logo: misterCaseLogo },
 ];
