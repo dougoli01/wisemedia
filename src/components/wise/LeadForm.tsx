@@ -3,18 +3,18 @@ import { useState, type FormEvent } from "react";
 const WEBHOOK_URL = "https://hook.us2.make.com/v5eq8j444ij2hkti2sfx7513lrby2bmh";
 
 const trafegOptions = [
-  "Não, nunca investimos",
-  "Sim, já investimos",
-  "Sim, já investimos e nunca tivemos retorno",
-];
+"Não, nunca investimos",
+"Sim, já investimos",
+"Sim, já investimos e nunca tivemos retorno"];
+
 
 const vendasOptions = [
-  "Menos de 40 aparelhos",
-  "Entre 40 a 60 aparelhos",
-  "Entre 60 a 100 aparelhos",
-  "Entre 100 e 200 aparelhos",
-  "Mais de 200 aparelhos",
-];
+"Menos de 40 aparelhos",
+"Entre 40 a 60 aparelhos",
+"Entre 60 a 100 aparelhos",
+"Entre 100 e 200 aparelhos",
+"Mais de 200 aparelhos"];
+
 
 export default function LeadForm() {
   const [form, setForm] = useState({
@@ -22,7 +22,7 @@ export default function LeadForm() {
     instagram: "",
     ja_rodou_trafego: "",
     vendas_mes: "",
-    mensagem: "",
+    mensagem: ""
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [sent, setSent] = useState(false);
@@ -48,47 +48,47 @@ export default function LeadForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...form,
-          data_hora: new Date().toISOString(),
-        }),
+          data_hora: new Date().toISOString()
+        })
       });
     } catch {
-      // still show success — webhook may be configured later
-    }
-    setLoading(false);
-    setSent(true);
-  }
 
-  if (sent) {
-    return (
-      <section id="contato" className="py-20 md:py-28">
+
+
+
+
+
+
+
+
+      // still show success — webhook may be configured later
+    }setLoading(false);setSent(true);}if (sent) {return <section id="contato" className="py-20 md:py-28">
         <div className="container max-w-xl text-center">
           <div className="rounded-2xl border border-primary/20 bg-primary/5 p-10">
           <h3 className="text-2xl font-bold text-primary">Recebemos seu contato!</h3>
             <p className="mt-3 text-muted-foreground">A equipe Wise vai te chamar em breve no WhatsApp.</p>
-            <a
-              href={`https://wa.me/5561981504925?text=${encodeURIComponent("Olá, tudo bem? Vim do site e queria um atendimento mais rápido.")}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-block w-full rounded-lg bg-primary py-3.5 text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90"
-            >
+            <a href={`https://wa.me/5561981504925?text=${encodeURIComponent("Olá, tudo bem? Vim do site e queria um atendimento mais rápido.")}`} target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-block w-full rounded-lg bg-primary py-3.5 text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90">
+              
               Chame a gente no WhatsApp
             </a>
             <p className="mt-3 text-sm text-muted-foreground">
               Caso queira um atendimento mais rápido,{" "}
               <a
-                href={`https://wa.me/5561981504925?text=${encodeURIComponent("Olá, tudo bem? Vim do site e queria um atendimento mais rápido.")}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-primary underline underline-offset-2 hover:opacity-80"
-              >
+              href={`https://wa.me/5561981504925?text=${encodeURIComponent("Olá, tudo bem? Vim do site e queria um atendimento mais rápido.")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-primary underline underline-offset-2 hover:opacity-80">
+                
                 clique aqui
               </a>{" "}
               e fale diretamente com nossa equipe.
             </p>
           </div>
         </div>
-      </section>
-    );
+      </section>;
+
   }
 
   return (
@@ -96,7 +96,7 @@ export default function LeadForm() {
       <div className="container max-w-xl">
         <h2 className="fade-up text-center text-3xl font-bold tracking-tight md:text-4xl">Fale com a Wise</h2>
         <p className="fade-up mt-3 text-center text-muted-foreground">
-          Preencha o formulário e entraremos em contato pelo WhatsApp.
+          Preencha o formulário e entraremos em contato por ligação.
         </p>
 
         <form onSubmit={handleSubmit} className="fade-up mt-10 space-y-5">
@@ -108,8 +108,8 @@ export default function LeadForm() {
               value={form.nome}
               onChange={(e) => setForm({ ...form, nome: e.target.value })}
               className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-ring/20"
-              placeholder="Seu nome"
-            />
+              placeholder="Seu nome" />
+            
             {errors.nome && <p className="mt-1 text-xs text-destructive">{errors.nome}</p>}
           </div>
 
@@ -121,8 +121,8 @@ export default function LeadForm() {
               value={form.instagram}
               onChange={(e) => setForm({ ...form, instagram: e.target.value })}
               className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-ring/20"
-              placeholder="@sualoja"
-            />
+              placeholder="@sualoja" />
+            
             {errors.instagram && <p className="mt-1 text-xs text-destructive">{errors.instagram}</p>}
           </div>
 
@@ -132,12 +132,12 @@ export default function LeadForm() {
             <select
               value={form.ja_rodou_trafego}
               onChange={(e) => setForm({ ...form, ja_rodou_trafego: e.target.value })}
-              className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-ring/20"
-            >
+              className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-ring/20">
+              
               <option value="">Selecione...</option>
-              {trafegOptions.map((t) => (
-                <option key={t} value={t}>{t}</option>
-              ))}
+              {trafegOptions.map((t) =>
+              <option key={t} value={t}>{t}</option>
+              )}
             </select>
             {errors.ja_rodou_trafego && <p className="mt-1 text-xs text-destructive">{errors.ja_rodou_trafego}</p>}
           </div>
@@ -148,12 +148,12 @@ export default function LeadForm() {
             <select
               value={form.vendas_mes}
               onChange={(e) => setForm({ ...form, vendas_mes: e.target.value })}
-              className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-ring/20"
-            >
+              className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-ring/20">
+              
               <option value="">Selecione...</option>
-              {vendasOptions.map((t) => (
-                <option key={t} value={t}>{t}</option>
-              ))}
+              {vendasOptions.map((t) =>
+              <option key={t} value={t}>{t}</option>
+              )}
             </select>
             {errors.vendas_mes && <p className="mt-1 text-xs text-destructive">{errors.vendas_mes}</p>}
           </div>
@@ -166,19 +166,19 @@ export default function LeadForm() {
               onChange={(e) => setForm({ ...form, mensagem: e.target.value })}
               rows={3}
               className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-ring/20 resize-none"
-              placeholder="Conte um pouco sobre sua loja..."
-            />
+              placeholder="Conte um pouco sobre sua loja..." />
+            
           </div>
 
           <button
             type="submit"
             disabled={loading}
-            className="w-full rounded-lg bg-primary py-3.5 text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-60"
-          >
+            className="w-full rounded-lg bg-primary py-3.5 text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-60">
+            
             {loading ? "Enviando..." : "Enviar contato"}
           </button>
         </form>
       </div>
-    </section>
-  );
+    </section>);
+
 }
