@@ -141,7 +141,7 @@ export default function LeadForm() {
 
           {/* Já rodou tráfego */}
           <div>
-            <label className="mb-1.5 block text-sm font-medium">Já investiu em tráfego pago? *</label>
+            <label className="mb-1.5 block text-sm font-medium text-primary-foreground">Já investiu em tráfego pago? *</label>
             <select
               value={form.ja_rodou_trafego}
               onChange={(e) => setForm({ ...form, ja_rodou_trafego: e.target.value })}
