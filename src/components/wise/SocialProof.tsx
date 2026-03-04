@@ -7,8 +7,8 @@ import aurionLogo from "@/assets/clients/aurion.png";
 import misterCaseLogo from "@/assets/clients/mister-case.png";
 
 const cases = [
-  { client: "Noelia Store", location: "Brasília, DF", result: "+312% de alcance em 60 dias", logo: noeliaLogo },
-  { client: "Barão Apple", location: "Brasília, DF", result: "87 leads qualificados/mês", logo: winStoreLogo },
+  { client: "Noelia Store", location: "Brasília, DF", result: "+125% de crescimento nas vendas", logo: noeliaLogo },
+  { client: "Barão Apple", location: "Brasília, DF", result: "Estruturação digital e aumento das vendas", logo: winStoreLogo },
   { client: "Big Apple", location: "Brasília, DF", result: "+120% de vendas pelo tráfego", logo: bigAppleLogo },
   { client: "Cloud Cell", location: "Brasília, DF", result: "+ de 100 vendas mês", logo: cloudCellLogo },
   { client: "Ícaro Games e Cell", location: "Brasília, DF", result: "+ 150 vendas mês", logo: icaroLogo },
