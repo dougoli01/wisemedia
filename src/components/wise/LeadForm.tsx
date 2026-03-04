@@ -157,7 +157,7 @@ export default function LeadForm() {
 
           {/* Vendas por mês */}
           <div>
-            <label className="mb-1.5 block text-sm font-medium">Nº de vendas de celular por mês *</label>
+            <label className="mb-1.5 block text-sm font-medium text-primary-foreground">Nº de vendas de celular por mês *</label>
             <select
               value={form.vendas_mes}
               onChange={(e) => setForm({ ...form, vendas_mes: e.target.value })}
