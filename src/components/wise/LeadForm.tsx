@@ -115,7 +115,18 @@ export default function LeadForm() {
             {errors.nome && <p className="mt-1 text-xs text-destructive">{errors.nome}</p>}
           </div>
 
-          {/* Instagram */}
+          {/* Telefone */}
+          <div>
+            <label className="mb-1.5 block text-sm font-medium">Telefone (WhatsApp) *</label>
+            <input
+              type="tel"
+              value={form.telefone}
+              onChange={(e) => setForm({ ...form, telefone: e.target.value })}
+              className="w-full rounded-lg border border-input bg-background px-4 py-3 text-sm outline-none transition-colors focus:border-primary focus:ring-2 focus:ring-ring/20"
+              placeholder="(00) 00000-0000" />
+            {errors.telefone && <p className="mt-1 text-xs text-destructive">{errors.telefone}</p>}
+          </div>
+
           <div>
             <label className="mb-1.5 block text-sm font-medium">@ do Instagram *</label>
             <input
