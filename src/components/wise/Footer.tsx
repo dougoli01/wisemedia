@@ -10,10 +10,10 @@ export default function Footer() {
         {/* Left */}
         <div>
           <a href="#" className="inline-block">
-            <img src={wiseLogo} alt="Wise Media" className="h-8 brightness-0 invert" />
+            <img alt="Wise Media" className="h-8 brightness-0 invert" src="/lovable-uploads/285de5bd-8fe6-4d98-963c-c570e71c0da7.png" />
           </a>
           <p className="mt-2 text-sm text-primary-foreground/60">Marketing que vende para lojas de celular.</p>
-          <p className="mt-1 text-xs text-primary-foreground/40">© 2026 Wise Agência. Brasília, DF.</p>
+          <p className="mt-1 text-xs text-primary-foreground/40">© 2026 Wise Media. Brasília, DF.</p>
         </div>
 
         {/* Right */}
@@ -22,20 +22,20 @@ export default function Footer() {
             href="https://www.instagram.com/wisemedia_"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg border border-primary-foreground/20 px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary-foreground/10"
-          >
+            className="rounded-lg border border-primary-foreground/20 px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary-foreground/10">
+            
             Instagram
           </a>
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg border border-primary-foreground/20 px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary-foreground/10"
-          >
+            className="rounded-lg border border-primary-foreground/20 px-5 py-2.5 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary-foreground/10">
+            
             WhatsApp
           </a>
         </div>
       </div>
-    </footer>
-  );
+    </footer>);
+
 }
