@@ -32,6 +32,7 @@ export default function LeadForm() {
   function validate() {
     const e: Record<string, string> = {};
     if (!form.nome.trim()) e.nome = "Informe seu nome";
+    if (!form.telefone.trim()) e.telefone = "Informe seu telefone";
     if (!form.instagram.trim()) e.instagram = "Informe seu @";
     if (!form.ja_rodou_trafego) e.ja_rodou_trafego = "Selecione uma opção";
     if (!form.vendas_mes) e.vendas_mes = "Selecione uma opção";
