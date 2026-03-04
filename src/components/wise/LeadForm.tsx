@@ -19,6 +19,7 @@ const vendasOptions = [
 export default function LeadForm() {
   const [form, setForm] = useState({
     nome: "",
+    telefone: "",
     instagram: "",
     ja_rodou_trafego: "",
     vendas_mes: "",
