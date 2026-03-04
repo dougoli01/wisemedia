@@ -13,7 +13,7 @@ const cases = [
   { client: "Cloud Cell", location: "Brasília, DF", result: "+ de 100 vendas mês", logo: cloudCellLogo },
   { client: "Ícaro Games e Cell", location: "Brasília, DF", result: "+ 150 vendas mês", logo: icaroLogo },
   { client: "Aurion", location: "Cabo Frio, RJ", result: "+130% de crescimento nas redes", logo: aurionLogo },
-  { client: "Mister Case", location: "Belo Horizonte, BH", result: "Resultado em breve", logo: misterCaseLogo },
+  { client: "Mister Case", location: "Belo Horizonte, BH", result: "+117% de crescimento nas vendas", logo: misterCaseLogo },
 ];
 
 function Card({ c }: { c: (typeof cases)[0] }) {
