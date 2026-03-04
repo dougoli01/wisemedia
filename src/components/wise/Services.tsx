@@ -54,7 +54,7 @@ const services = [
   {
     icon: Palette,
     title: "Design",
-    subtitle: "Edição de fotos e vídeos",
+    subtitle: "Sua marca tão boa quanto o produto que você vende",
     items: [
       "Edição profissional de fotos de produtos",
       "Criação de vídeos para Reels e Stories",
