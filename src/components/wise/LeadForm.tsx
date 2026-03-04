@@ -63,8 +63,28 @@ export default function LeadForm() {
       <section id="contato" className="py-20 md:py-28">
         <div className="container max-w-xl text-center">
           <div className="rounded-2xl border border-primary/20 bg-primary/5 p-10">
-            <h3 className="text-2xl font-bold text-primary">Recebemos seu contato!</h3>
+          <h3 className="text-2xl font-bold text-primary">Recebemos seu contato!</h3>
             <p className="mt-3 text-muted-foreground">A equipe Wise vai te chamar em breve no WhatsApp.</p>
+            <a
+              href={`https://wa.me/5561981504925?text=${encodeURIComponent("Olá, tudo bem? Vim do site e queria um atendimento mais rápido.")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-block w-full rounded-lg bg-primary py-3.5 text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+            >
+              Chame a gente no WhatsApp
+            </a>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Caso queira um atendimento mais rápido,{" "}
+              <a
+                href={`https://wa.me/5561981504925?text=${encodeURIComponent("Olá, tudo bem? Vim do site e queria um atendimento mais rápido.")}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-primary underline underline-offset-2 hover:opacity-80"
+              >
+                clique aqui
+              </a>{" "}
+              e fale diretamente com nossa equipe.
+            </p>
           </div>
         </div>
       </section>
