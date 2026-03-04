@@ -19,8 +19,8 @@ const cases = [
 function Card({ c }: { c: (typeof cases)[0] }) {
   return (
     <div className="w-[350px] flex-shrink-0 px-3">
-      <div className="rounded-2xl border border-border bg-card p-8 text-center">
-        <div className="mx-auto mb-5 flex h-24 w-24 items-center justify-center overflow-hidden rounded-2xl border border-border bg-muted">
+      <div className="rounded-2xl border border-border bg-card p-8 text-center h-[280px] flex flex-col items-center justify-center">
+        <div className="mx-auto mb-5 flex h-24 w-24 items-center justify-center overflow-hidden rounded-2xl border border-border bg-muted flex-shrink-0">
           {c.logo ? (
             <img src={c.logo} alt={`Logo ${c.client}`} className="h-full w-full p-2 object-contain" />
           ) : (
