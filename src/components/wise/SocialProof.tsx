@@ -3,6 +3,8 @@ import winStoreLogo from "@/assets/clients/win-store.png";
 import bigAppleLogo from "@/assets/clients/big-apple.png";
 import cloudCellLogo from "@/assets/clients/cloud-cell.png";
 import icaroLogo from "@/assets/clients/icaro.png";
+import aurionLogo from "@/assets/clients/aurion.png";
+import misterCaseLogo from "@/assets/clients/mister-case.png";
 
 const cases = [
   { client: "Noelia Store", location: "Brasília, DF", result: "+312% de alcance em 60 dias", logo: noeliaLogo },
@@ -10,6 +12,8 @@ const cases = [
   { client: "Big Apple", location: "Brasília, DF", result: "+5.200 seguidores em 90 dias", logo: bigAppleLogo },
   { client: "Cloud Cell", location: "Brasília, DF", result: "+180% de faturamento em 45 dias", logo: cloudCellLogo },
   { client: "Ícaro Games e Cell", location: "Brasília, DF", result: "62 vendas diretas pelo Instagram", logo: icaroLogo },
+  { client: "Aurion", location: "Brasília, DF", result: "Resultado em breve", logo: aurionLogo },
+  { client: "Mister Case", location: "Brasília, DF", result: "Resultado em breve", logo: misterCaseLogo },
 ];
 
 function Card({ c }: { c: (typeof cases)[0] }) {
