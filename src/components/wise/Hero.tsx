@@ -9,7 +9,7 @@ const badges = [
 
 export default function Hero() {
   return (
-    <section className="gradient-hero flex min-h-[90vh] items-center pt-16">
+    <section className="gradient-hero flex min-h-[90vh] items-center pt-24 md:pt-28">
       <div className="container py-20 md:py-32">
         <div className="grid items-center gap-12 md:grid-cols-2">
           {/* Left content */}

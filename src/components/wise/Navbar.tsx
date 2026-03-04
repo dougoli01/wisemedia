@@ -12,7 +12,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-lg">
+    <nav className="fixed top-8 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-lg md:top-9">
       <div className="container flex h-16 items-center justify-between">
         <a href="#" className="flex items-center">
           <img alt="Wise Media" className="h-12 md:h-14" src="/lovable-uploads/bec464af-0219-4a94-9cbb-5e5b69c4fbc9.png" />
