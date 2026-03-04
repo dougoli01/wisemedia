@@ -36,15 +36,14 @@ const services = [
     subtitle: "Seu estrategista de vendas do lado de fora",
     items: [
       "Reuniões focadas em resultado, sem enrolação, só decisão",
-      "Análise de métricas de vendas e conversão",
-      "Ajustes estratégicos baseados em dados reais",
+      "Identificamos onde você está perdendo vendas e corrigimos na hora",
       "Suporte direto com a equipe Wise",
     ],
   },
   {
     icon: Database,
     title: "CRM",
-    subtitle: "Gestão de clientes",
+    subtitle: "Pare de perder cliente por falta de follow-up",
     items: [
       "Organização de leads e clientes em funil de vendas",
       "Automação de follow-up via WhatsApp",
