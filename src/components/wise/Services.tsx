@@ -4,12 +4,11 @@ const services = [
   {
     icon: Target,
     title: "Tráfego Pago",
-    subtitle: "Meta Ads & Google Ads",
+    subtitle: "Anúncios que trazem cliente pronto pra comprar",
     items: [
-      "Campanhas no Instagram e Facebook para compradores da sua região",
-      "Anúncios no Google quando o cliente pesquisa 'loja de celular perto'",
+      "Campanhas no Instagram e Facebook direcionadas 100% para venda",
       "Retargeting para quem visitou seu perfil mas não comprou",
-      "Relatórios semanais com métricas reais de vendas",
+      "Relatório semanal com dados reais, você vê o retorno do que investiu",
     ],
   },
   {
