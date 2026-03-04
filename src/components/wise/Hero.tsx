@@ -1,9 +1,10 @@
-import { MapPin, BarChart3, Share2 } from "lucide-react";
+import { MapPin, BarChart3, Share2, GraduationCap } from "lucide-react";
 
 const badges = [
 { icon: MapPin, label: "Brasília, DF" },
 { icon: BarChart3, label: "Meta Ads + Google Ads" },
-{ icon: Share2, label: "Gestão de redes" }];
+{ icon: Share2, label: "Gestão de redes" },
+{ icon: GraduationCap, label: "Treinamento comercial" }];
 
 
 export default function Hero() {
