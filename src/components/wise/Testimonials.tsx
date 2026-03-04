@@ -9,7 +9,7 @@ const testimonials = [
   { src: depoimento2, caption: "85 aparelhos vendidos em dezembro" },
   { src: depoimento3, caption: "150 aparelhos vendidos no mês" },
   { src: depoimento4, caption: "Cliente lotada pedindo pra segurar o tráfego" },
-  { src: depoimento5, caption: "Bateram a meta de 40k em vendas" },
+  { src: depoimento5, caption: "Bateram a meta de 40k de LUCRO em vendas" },
 ];
 
 export default function Testimonials() {
