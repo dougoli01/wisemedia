@@ -65,7 +65,7 @@ export default function SocialProof() {
   const translateX = -(offset * (100 / 3));
 
   return (
-    <section id="resultados" className="bg-muted py-20 md:py-28">
+    <section id="resultados" className="py-20 md:py-28">
       <div className="container">
         <h2 className="fade-up text-center text-3xl font-bold tracking-tight md:text-4xl">
           Lojas de celular que já cresceram com a Wise
